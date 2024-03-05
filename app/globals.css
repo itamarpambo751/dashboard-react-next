@@ -4,30 +4,31 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --primary: #8d24c1;
+  --secondary: #e900a3;
+  --third: #3b00b9;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.shadow {
+  box-shadow: 0 6px 10px rgba(90, 90, 90, 0.2),
+  0 2px 1px rgba(176, 176, 176, 0.2),
+  0 1px 1px rgba(157, 157, 157, 0.1),
+  0 3px 2px rgba(136, 136, 136, 0.2),
+  0 1px 1px rgba(104, 104, 104, 0.1),
+  0 6px 2px rgba(100, 100, 100, 0.1),
+  0 6px 10px rgba(95, 95, 95, 0.1);
+}
+.gradient_1 {
+  background: linear-gradient(to left, var(--third), var(--primary));
+}
+.gradient_2 {
+  background: linear-gradient(to left, var(--primary), var(--secondary));
+}
+.gradient_3 {
+  background: linear-gradient(to left, var(--secondary), var(--third));
 }
